@@ -1,0 +1,4 @@
+# Expo Camera takePictureAsync - Camera not ready
+This repository demonstrates a common error encountered when using the Expo Camera API: `takePictureAsync` being called before the camera is fully initialized.  The `bug.js` file shows the problematic code, while `bugSolution.js` provides the corrected version.
+
+The issue arises from calling `takePictureAsync` within a `useEffect` hook before the camera permissions have been granted and the camera has finished initializing.  The solution involves using asynchronous operations and ensuring `takePictureAsync` is called only after these steps are complete.
